@@ -10,7 +10,7 @@ fun main(args: Array<String>) {
     val s = "abc"
     val str = "${s.length} is length of $s string"
     val price = """${'$'}9.99"""
-    println(str+price)
+    println(str + price)
 
     //underscores in numeric literals
     val oneMillion = 1_000_000
@@ -24,7 +24,7 @@ fun main(args: Array<String>) {
     val rep: Int = 100
     println(rep === rep)
     val boxedRep: Int? = rep
-    val anotherBoxedRep: Int? =rep
+    val anotherBoxedRep: Int? = rep
     println(boxedRep === anotherBoxedRep)
 
 
@@ -54,4 +54,21 @@ fun main(args: Array<String>) {
     var ope = 1 shl 3
     println(ope)
 
+    //create array by array constructor
+    val asc = Array(5, { i -> i * i })
+    for (e in asc) println(e)
+
+    //test String
+    val string = "Helloworld"
+    for (c in string) println(c)
+    println(string[2])
+
+    //string in kotlin
+    val text = """
+    Tell me and I forget.
+    |Teach me and I remember.
+    Involve me and I learn.
+    |(Benjamin Franklin)
+    """.trimMargin()
+    println(text)
 }
